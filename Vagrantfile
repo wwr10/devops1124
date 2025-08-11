@@ -14,6 +14,12 @@ config.vm.provision "shell", path: "script.sh"
         ansible.install_mode = "pip"
     end
 
+    controle.vm.provision "ansible_local" do |ansible|
+        ansible.playbook = "installdocker.yml"
+        ansible.install_mode = "pip"
+    end
+    
+
   end
 
   config.vm.define "web" do |web|
@@ -38,5 +44,6 @@ config.vm.provision "shell", path: "script.sh"
     end
   end  
 
+    
 
 end
