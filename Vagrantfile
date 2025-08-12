@@ -5,8 +5,8 @@ config.vm.provision "shell", path: "script.sh"
     controle.vm.hostname = "controle"
     controle.vm.network "private_network", ip: "172.17.177.100"
     controle.vm.provider "virtualbox" do |vb|
-      vb.memory = "2048"
-      vb.cpus = 2
+      vb.memory = "6192"
+      vb.cpus = 4
       vb.name = "controle"
     end
     controle.vm.provision "ansible_local" do |ansible|
@@ -19,6 +19,10 @@ config.vm.provision "shell", path: "script.sh"
         ansible.install_mode = "pip"
     end
     
+    controle.vm.provision "ansible_local" do |ansible|
+        ansible.playbook = "installjenkins.yml"
+        ansible.install_mode = "pip"
+    end
 
   end
 
