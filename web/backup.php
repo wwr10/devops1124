@@ -7,7 +7,7 @@ require('header.php');
 #$dados = mysql_query('SELECT * FROM log'); // Pega todos os registros da tabela log
 
 # php7
-$mysqli = new mysqli('192.168.1.20', 'express', 'AllSafe0!', 'backup');
+$mysqli = new mysqli('db', 'express', 'AllSafe0!', 'backup');
 $dados = $mysqli->query("SELECT * FROM log");
 ?>
 	<div id="grid_content">
