@@ -1,9 +1,12 @@
 [web]
-172.17.177.101 ansible_user=vagrant ansible_ssh_private_key_file="~/.ssh/id_rsa"
+172.17.177.101 ansible_user=vagrant ansible_ssh_private_key_file="/var/ssh/id_rsa" ansible_ssh_extra_args='-o StrictHostKeyChecking=accept-new'
+
 
 [db]
-172.17.177.102 ansible_user=vagrant ansible_ssh_private_key_file="~/.ssh/id_rsa"
+172.17.177.102 ansible_user=vagrant ansible_ssh_private_key_file="/var/ssh/id_rsa" ansible_ssh_extra_args='-o StrictHostKeyChecking=accept-new'
+
 
 [geral]
-172.17.177.101 ansible_user=vagrant ansible_ssh_private_key_file="~/.ssh/id_rsa"
-172.17.177.102 ansible_user=vagrant ansible_ssh_private_key_file="~/.ssh/id_rsa"
+172.17.177.101 ansible_user=vagrant ansible_ssh_private_key_file="/var/ssh/id_rsa" ansible_ssh_extra_args='-o StrictHostKeyChecking=accept-new'
+
+172.17.177.102 ansible_user=vagrant ansible_ssh_private_key_file="/var/ssh/id_rsa" ansible_ssh_extra_args='-o StrictHostKeyChecking=accept-new'
